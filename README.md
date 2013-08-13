@@ -11,13 +11,14 @@ sudo npm install -g forever
 ## Nginx installation
 sudo apt-get install nginx
 
-## Replace /etc/nginx.conf with nginx-conf/nginx.conf
-## Replace /etc/nginx/sites-enabled/default with nginx-conf/default
+> Replace /etc/nginx.conf with nginx-conf/nginx.conf
+> Replace /etc/nginx/sites-enabled/default with nginx-conf/default
 
 ## Create log directory
 mkdir -p /var/log/cmc-log
 
-## Execute APP with two worker defined with CLUSTER_WORKERS=<number-of-workers>
+#
+>> Execute APP with two worker defined with CLUSTER_WORKERS=<number-of-workers>
 sudo CLUSTER_WORKERS=1 node server.js &
 
 ## Run server.js with forever (OPTIONAL)
