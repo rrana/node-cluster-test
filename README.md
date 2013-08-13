@@ -1,25 +1,25 @@
 node-clustering-test
 =================
 
-# Clone this project
+## Clone this project
 
-# Node package installation
+## Node package installation
 sudo npm install -g cluster
 sudo npm install -g dateformat
 sudo npm install -g forever
 
-# Nginx installation
+## Nginx installation
 sudo apt-get install nginx
 
-# Replace /etc/nginx.conf with nginx-conf/nginx.conf
-# Replace /etc/nginx/sites-enabled/default with nginx-conf/default
+## Replace /etc/nginx.conf with nginx-conf/nginx.conf
+## Replace /etc/nginx/sites-enabled/default with nginx-conf/default
 
-# Create log directory
+## Create log directory
 mkdir -p /var/log/cmc-log
 
-# Execute APP with two worker defined with CLUSTER_WORKERS=<number-of-workers>
+## Execute APP with two worker defined with CLUSTER_WORKERS=<number-of-workers>
 sudo CLUSTER_WORKERS=1 node server.js &
 
-# Run server.js with forever (OPTIONAL)
+## Run server.js with forever (OPTIONAL)
 sudo CLUSTER_WORKERS=2 forever start -e /var/log/cmc-log/err.log -o /var/log/cmc-log/out.log -a server.js
 
