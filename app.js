@@ -22,5 +22,5 @@ var server = http.createServer(function (req, res) {
     res.end('Pi: ' + estimatePi());
 });
 
-// Listen to a specified port, or default to 8000
+// Listen to a specified port, or default to 8001
 server.listen(args[0] || 8001);
