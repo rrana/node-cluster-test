@@ -5,7 +5,7 @@ var datefmt = require('dateformat');
 // http://nodejs.org/api/cluster.html
 
 // Setup
-var workers = parseInt(process.env.CLUSTER_WORKERS, 4);
+var workers = parseInt(process.env.CLUSTER_WORKERS, 10);
 
 cluster.setupMaster({
     // exec : "app.js",
